@@ -1,3 +1,6 @@
 21/02/2025
 - Contexto histórico da Internet e a linguagem JavaScript
-- 
+- Explicação do paradigma da linguagem, tipagem fraca e dinamica, 
+escopo das variaveis global e local.
+- Dinamica se refere ao tipo em seu tempo de execução e atribuição, fraca se refere a capacidade de realizar conversões
+automaticas entre diferentes tipos.
