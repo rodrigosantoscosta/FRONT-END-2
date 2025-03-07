@@ -1,14 +1,14 @@
-let pessoas = [];
 let alturas = [];
-// var genero = [];
 let altura_homens = [];
 let qtd_mulheres = 0;
 let qtd_homens = 0;
 
-for(let i = 0; i < 3; i++){
+for(let i = 0; i < 15; i++){
     let altura = prompt(`Digite a altura da pessoa nº ${i + 1}  da lista`); 
     let genero = prompt(`Digite o genero da pessoa nº ${i + 1}  da lista`);
-    altura = parseFloat(altura);//Certificando que some e nao concatene strings na hora de fazer a media, lembrar de estudar as conversões de tipo corretamente para formatação para logging
+    //Certificando que some e nao concatene strings na hora
+    // de fazer a media, lembrar de estudar as conversões de tipo corretamente para formatação para logging
+    altura = parseFloat(altura);
     alturas.push(altura);
 
     if (genero === 'm'){
