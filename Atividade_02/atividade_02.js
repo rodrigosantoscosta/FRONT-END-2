@@ -11,10 +11,10 @@ for(let i = 0; i < 15; i++){
     altura = parseFloat(altura);
     alturas.push(altura);
 
-    if (genero === 'm'){
+    if (genero === 'masculino'){
         altura_homens.push(altura);
         qtd_homens += 1;
-    }else if (genero === 'f'){
+    }else if (genero === 'feminino'){
         qtd_mulheres += 1;
     }
 };
