@@ -35,7 +35,7 @@ let media_homens = (soma_homens) / (altura_homens.length);
 // });
 
 
-console.log(`A maior altura do grupo é de ${Math.max(...alturas).toFixed(1)} centímetros, 
+console.log(`A maior altura do grupo é de ${Math.max(...alturas).toFixed(2)} centímetros, 
 a menor altura é de ${Math.min(...alturas)} centímetros.`);
 console.log(`O número de pessoas do gênero feminino é ${qtd_mulheres}.`);
-console.log(`A média de altura dos homens é ${media_homens.toFixed(1)} centímetros.`);
+console.log(`A média de altura dos homens é ${media_homens.toFixed(2)} centímetros.`);
