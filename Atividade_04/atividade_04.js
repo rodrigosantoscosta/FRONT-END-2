@@ -1,32 +1,24 @@
-function calcularTotal(precoUnitario, quantidadeComprada){
-    return precoUnitario * quantidadeComprada;
+function calcularTotal(preco, quantidade) {
+    return preco * quantidade;
 }
 
-function aplicarDesconto(valorTotal){
-    if (valorTotal > 100.0){
-        return valorTotal * 0.9;
-    }else{
-        console.log("Não é possivel aplicar o desconto! Compra abaixo de R$100,00")
-        return valorTotal;
+function aplicarDesconto(valorTotal) {
+    return valorTotal > 100 ? valorTotal * 0.9 : valorTotal;
+}
+
+function exibirResumo() {
+    let precoUnitario = parseFloat(prompt("Digite o preço unitário do produto:"));
+    let quantidade = parseInt(prompt("Digite a quantidade comprada:"));
+
+    if (isNaN(precoUnitario) || isNaN(quantidade) || precoUnitario <= 0 || quantidade <= 0) {
+        alert("Por favor, insira valores válidos.");
+        return;
     }
+
+    let valorTotal = calcularTotal(precoUnitario, quantidade);
+    let valorFinal = aplicarDesconto(valorTotal);
+
+    alert(`Resumo da compra:\n- Valor total antes do desconto: R$ ${valorTotal.toFixed(2)}\n- Valor final com desconto: R$ ${valorFinal.toFixed(2)}`);
 }
 
-function temDesconto(valorTotal){
-    if(valorTotal> 100.0){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-function exibirResumo(preco, quantidade){
-    let total = calcularTotal(preco, quantidade);
-    totalComDesconto = aplicarDesconto(total);
-    window.alert("Preço unitário: R$" + preco.toFixed(2) + " Quantidade: " + quantidade +"\nTotal: R$" 
-    + total.toFixed(2) + (temDesconto(total) ? "\nTotal com desconto de 10%: R$" + totalComDesconto.toFixed(2) : "\n"));
-}
- 
-let preco = parseFloat(prompt("Digite o preço do produto: "));
-let quantidade = parseInt(prompt("Digite a quantidade: "));
-
-exibirResumo(preco, quantidade);
+document.getElementById("meuBotao").addEventListener("click", exibirResumo);
