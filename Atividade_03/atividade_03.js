@@ -20,10 +20,10 @@ console.log(array_dobrado.map(array_dobrado => array_dobrado * 2));
 let outros_numeros = [1,3,5,7,9];
 let numeros_menores_q5 = outros_numeros;
 
-function verificaMenorQue_5(numero){
-    if (numero < 5){
-        return numero;
-    }
-}
-console.log("\nArray com numeros menores que 5: ");
+// function verificaMenorQue_5(numero){
+//     if (numero < 5){
+//         return numero;
+//     }
+// }
+console.log("\nArray com numeros menores que 5 usando fiter(): ");
 console.log(numeros_menores_q5.filter((numero) => numero < 5));
