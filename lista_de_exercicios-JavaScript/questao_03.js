@@ -14,6 +14,7 @@ let next = 0;
 let soma = 0;
 
 for(let i = 0; i < lista_size; i++){
+    
     next = i+1;
     
     if(next > lista_size){
